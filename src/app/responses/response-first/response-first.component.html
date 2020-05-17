@@ -12,19 +12,9 @@
                         <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
                     </td>
                 </tr>
-                <tr>
-                    <td *ngFor="let i of keyArray.slice(8,12)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
-                    </td>
-                </tr>
-                <tr>
-                    <td *ngFor="let i of keyArray.slice(12,16)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
-                    </td>
-                </tr>
             </tbody>
         </table>
-        <button [routerLink]="['/page1',1]">
+        <button [routerLink]="['/page2',1]">
             OK
         </button>
     </div>

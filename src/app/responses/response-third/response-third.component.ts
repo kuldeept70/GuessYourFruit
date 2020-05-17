@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { GetFruitListService } from 'src/app/get-fruit-list.service';
-import {tap} from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-selectfruit',
-  templateUrl: './selectfruit.component.html',
-  styleUrls: ['./selectfruit.component.css']
+  selector: 'app-response-third',
+  templateUrl: './response-third.component.html',
+  styleUrls: ['./response-third.component.css']
 })
-export class SelectfruitComponent implements OnInit {
+export class ResponseThirdComponent implements OnInit {
   fruitData;
   keyArray;
   constructor(private getFruit:GetFruitListService) { }
@@ -18,9 +18,8 @@ export class SelectfruitComponent implements OnInit {
     ).subscribe(data=>{
       console.log(data);
       this.fruitData=data;
-      this.keyArray=Object.keys(this.fruitData);
-      console.error("List hi"+Object.keys(this.fruitData).filter(key=>+key&8));
+      this.keyArray=Object.keys(this.fruitData).filter(key=>+key&2);
+      console.error("List"+this.keyArray);
     });
   }
-
 }
