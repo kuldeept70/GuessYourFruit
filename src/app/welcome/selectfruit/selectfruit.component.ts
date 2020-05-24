@@ -18,8 +18,9 @@ export class SelectfruitComponent implements OnInit {
     ).subscribe(data=>{
       console.log(data);
       this.fruitData=data;
-      this.keyArray=Object.keys(this.fruitData);
-      console.error("List hi"+Object.keys(this.fruitData).filter(key=>+key&8));
+      const random=Math.floor(Math.random()*15);
+      this.keyArray=[...Object.keys(this.fruitData).slice(random),...Object.keys(this.fruitData).slice(0,random)];
+      console.error("List hi"+this.keyArray);
     });
   }
 
