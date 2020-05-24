@@ -14,8 +14,14 @@
                 </tr>
             </tbody>
         </table>
-        <button [routerLink]="['/page2',1]">
-            OK
-        </button>
+        <div style="text-align: center;">Can you see your loving fruit?</div>
+        <div style="margin-left:40%;">
+            <button (click)="yes()" type="button" class="btn btn-primary">
+                Yes
+            </button>
+            <button (click)="no()" type="button" class="btn btn-primary" style="margin:5px;">
+                No
+            </button>
+        </div>
     </div>
 </div>

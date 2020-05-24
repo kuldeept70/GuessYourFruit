@@ -4,28 +4,36 @@
             <tbody *ngIf="fruitData">
                 <tr>
                     <td *ngFor="let i of keyArray.slice(0,4)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100" [style.margin.px]="10">
+                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"
+                            [style.margin.px]="10">
                     </td>
                 </tr>
                 <tr>
                     <td *ngFor="let i of keyArray.slice(4,8)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
+                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"
+                            [style.margin.px]="10">
                     </td>
                 </tr>
                 <tr>
                     <td *ngFor="let i of keyArray.slice(8,12)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
+                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"
+                            [style.margin.px]="10">
                     </td>
                 </tr>
                 <tr>
                     <td *ngFor="let i of keyArray.slice(12,16)">
-                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"  [style.margin.px]="10">
+                        <img *ngIf="fruitData[i]" [src]="fruitData[i]" [style.width.px]="100" [style.height.px]="100"
+                            [style.margin.px]="10">
                     </td>
                 </tr>
             </tbody>
         </table>
-        <button [routerLink]="['/page1',1]">
-            OK
-        </button>
+        <div>Select any Fruit that you love most.....wait don't tell anyone, not even your best friend.<br>Should we
+            start?</div>
+        <div style="margin-left:40%;">
+            <button [routerLink]="['/page1',0]" type="button" class="btn btn-primary">
+                Next
+            </button>
+        </div>
     </div>
 </div>
